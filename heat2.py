@@ -1,9 +1,6 @@
 import io
 N = input("What is the size of the problem")
 config = io.open("problem.def", 'w')
-i=0
-while i < int(N) + 1:
-  i+=1
 for line in io.open('problem.def.templ', 'r'):
   line = line.replace('$state.dimension', str(int(N)+1))
   line = line.replace('$boundarycond.dimension', str(int(N)+1))
